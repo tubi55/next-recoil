@@ -1,12 +1,12 @@
 import Header from '../components/Header';
 
-function Main() {
+function Youtube() {
 	return (
 		<div>
 			<Header />
-			<h1>Main</h1>
+			<h1>Youtube</h1>
 		</div>
 	);
 }
 
-export default Main;
+export default Youtube;

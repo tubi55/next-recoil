@@ -1,11 +1,8 @@
-import Header from '../components/Header';
-
 function Main() {
 	return (
-		<div>
-			<Header />
+		<main>
 			<h1>Main</h1>
-		</div>
+		</main>
 	);
 }
 

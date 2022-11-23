@@ -29,7 +29,6 @@ function Header() {
 					height: 100px;
 					background-color: #222;
 					padding: 30px 5vw;
-					box-sizing: border-box;
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
@@ -39,12 +38,10 @@ function Header() {
 					gap: 40px;
 				}
 				header h1 a {
-					text-decoration: none;
 					font: bold 30px/1 'arial';
 					color: #fff;
 				}
 				header nav a {
-					text-decoration: none;
 					font: bold 16px/1 'arial';
 					color: #555;
 				}

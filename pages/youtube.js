@@ -1,11 +1,8 @@
-import Header from '../components/Header';
-
 function Youtube() {
 	return (
-		<div>
-			<Header />
+		<main>
 			<h1>Youtube</h1>
-		</div>
+		</main>
 	);
 }
 

@@ -3,7 +3,7 @@ import Head from 'next/head';
 function HeadInfo({ title }) {
 	return (
 		<Head>
-			<title>{`DCODELAB-${title}`}</title>
+			<title>{`DCODELAB | ${title}`}</title>
 		</Head>
 	);
 }

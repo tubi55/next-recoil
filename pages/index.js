@@ -1,8 +1,10 @@
 import HeadInfo from '../components/Head';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useRecoilState } from 'recoil';
+import { vidsAtom } from '../atoms';
 
 function Main() {
-	const [Vids, setVids] = useState();
+	const [Vids, setVids] = useRecoilState(vidsAtom);
 
 	const fetchYoutube = async () => {
 		const data = await fetch('/api/youtube');

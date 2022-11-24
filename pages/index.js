@@ -1,20 +1,9 @@
 import HeadInfo from '../components/Head';
-import { useEffect } from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import { vidsAtom } from '../atoms';
 
 function Main() {
-	const [Vids, setVids] = useRecoilState(vidsAtom);
-
-	const fetchYoutube = async () => {
-		const data = await fetch('/api/youtube');
-		const result = await data.json();
-		setVids(result.items);
-	};
-
-	useEffect(() => {
-		fetchYoutube();
-	}, []);
+	const Vids = useRecoilValue(vidsAtom);
 
 	return (
 		<main>
@@ -22,14 +11,18 @@ function Main() {
 			<h1>Main</h1>
 			<section>
 				{!Vids && <p>Loading...</p>}
-				{Vids?.map((vid) => (
-					<article key={vid.id}>
-						<div className='pic'>
-							<img src={vid.snippet.thumbnails.high.url} alt={vid.snippet.title} />
-						</div>
-						<h2>{vid.snippet.title}</h2>
-					</article>
-				))}
+				{Vids?.map((vid, idx) => {
+					if (idx >= 2) return;
+
+					return (
+						<article key={vid.id}>
+							<div className='pic'>
+								<img src={vid.snippet.thumbnails.high.url} alt={vid.snippet.title} />
+							</div>
+							<h2>{vid.snippet.title}</h2>
+						</article>
+					);
+				})}
 			</section>
 
 			<style jsx>{`

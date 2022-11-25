@@ -8,7 +8,7 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/youtube',
-				destination: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${youtube_key}&playlistId=PLtt429gshWMp4G-VhNTFhBzBTd7GOEz-G&maxResults=4`,
+				destination: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${youtube_key}&playlistId=PLGOVj4gmzJyDZ4VkTTHeQFBnJzNPCjxYJ&maxResults=14`,
 			},
 		];
 	},

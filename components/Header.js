@@ -9,7 +9,7 @@ function Header() {
 			<header>
 				<h1>
 					<Link href='/' legacyBehavior>
-						<a>DCODELAB</a>
+						<a>DECODELAB</a>
 					</Link>
 				</h1>
 

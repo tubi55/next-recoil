@@ -1,6 +1,7 @@
 import HeadInfo from '../components/Head';
 import { useRecoilValue } from 'recoil';
 import { vidsAtom } from '../atoms';
+import Link from 'next/link';
 
 function Main() {
 	const Vids = useRecoilValue(vidsAtom);
@@ -17,7 +18,16 @@ function Main() {
 					return (
 						<article key={vid.id}>
 							<div className='pic'>
-								<img src={vid.snippet.thumbnails.high.url} alt={vid.snippet.title} />
+								<Link
+									href={{
+										pathname: `/detail/${vid.snippet.resourceId.videoId}`,
+										query: {
+											title: vid.snippet.title,
+											description: vid.snippet.description,
+										},
+									}}>
+									<img src={vid.snippet.thumbnails.high.url} alt={vid.snippet.title} />
+								</Link>
 							</div>
 							<h2>{vid.snippet.title}</h2>
 						</article>
